@@ -1,0 +1,7 @@
+insert into contact (contact_id) values (1)
+insert into contact (contact_id) values (2)
+insert into application (application_id, dt_created, product_name, contact_id) values (1, parsedatetime('17/12/2015', 'dd/MM/yyyy'), 'Product1', 1)
+insert into application (application_id, dt_created, product_name, contact_id) values (2, parsedatetime('17/01/2018', 'dd/MM/yyyy'), 'Product2', 1)
+insert into application (application_id, dt_created, product_name, contact_id) values (3, parsedatetime('01/03/2019', 'dd/MM/yyyy'), 'Product3', 1)
+insert into application (application_id, dt_created, product_name, contact_id) values (4, parsedatetime('01/03/2019', 'dd/MM/yyyy'), 'Product3', 1)
+insert into application (application_id, dt_created, product_name, contact_id) values (5, parsedatetime('17/12/2015', 'dd/MM/yyyy'), 'Product1', 2)
