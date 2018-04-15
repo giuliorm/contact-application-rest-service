@@ -4,12 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>ru.juriasan</groupId>
-	<artifactId>client-request-service</artifactId>
+	<artifactId>contact-application-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>client-request-service</name>
-	<description>Demo project for Spring Boot</description>
+	<name>contact-application-service</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
