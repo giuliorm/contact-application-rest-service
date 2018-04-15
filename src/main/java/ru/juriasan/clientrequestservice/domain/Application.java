@@ -1,5 +1,7 @@
 package ru.juriasan.clientrequestservice.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Objects;
@@ -21,6 +23,7 @@ public class Application {
     private long applicationId;
 
     @Column(name = "dt_created")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     @Temporal(TemporalType.DATE)
     private Date creation;
 
