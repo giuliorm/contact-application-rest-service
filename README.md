@@ -7,7 +7,7 @@ A plain REST service for managing client applications to bank products.
 `mvn clean package`
 
 the full jar will be placed in the `target` folder, 
-named `client-request-service-0.0.1-SNAPSHOT-jar-with-dependencies.jar`
+named `client-request-service-0.0.1-SNAPSHOT.jar`
 
 # API description
 

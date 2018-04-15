@@ -14,7 +14,7 @@ public class ApplicationController {
     @Autowired
     private ApplicationService applicationService;
 
-    @RequestMapping(value = "/latest/{contactId}", produces = {"application/json", "application/xml"},
+    @RequestMapping(value = "/latest/{contactId}", produces = {"application/json"},
             method = RequestMethod.GET)
     public Application getLatest(@PathVariable("contactId") Long contactId) {
         if (contactId == null) {
