@@ -30,10 +30,6 @@ public class ApplicationController {
 
     @RequestMapping(value = "/all", produces = {"application/json", "application/xml"}, method = RequestMethod.GET)
     public List<Application> getAll() {
-        List<Application> applications = applicationService.findAll();
-        if (applications == null || applications.isEmpty()) {
-            throw new DBEntityNotFoundException("None of the applications has been found in the DB");
-        }
-        return applications;
+        return applicationService.findAll();
     }
 }

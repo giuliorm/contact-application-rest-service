@@ -53,12 +53,32 @@
 
 	<build>
 		<plugins>
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+			<!--</plugin>-->
+				<!-- any other plugins -->
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<!--<archive>-->
+						<!--<manifest>-->
+							<!--<mainClass>ru.juriasan.clientrequestservice.ClientRequestServiceApplication</mainClass>-->
+						<!--</manifest>-->
+					<!--</archive>-->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>
