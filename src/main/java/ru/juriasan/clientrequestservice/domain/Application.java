@@ -61,25 +61,4 @@ public class Application {
     public void setProductName(String productName) {
         this.productName = productName;
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(applicationId, creation, productName);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-
-        if (!(o instanceof Application)) {
-            return false;
-        }
-        Application other = (Application) o;
-        boolean contactsAreNotNull = contact != null && other.getClient() != null;
-        if (!contactsAreNotNull) {
-            return this == o;
-        }
-        return Objects.equals(other.getCreation(), this.creation)
-                && Objects.equals(other.getProductName(), this.productName)
-                && Objects.equals(contact.getContactId(), other.getClient().getContactId());
-    }
 }

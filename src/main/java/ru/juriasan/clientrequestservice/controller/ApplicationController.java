@@ -1,7 +1,10 @@
 package ru.juriasan.clientrequestservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import ru.juriasan.clientrequestservice.domain.Application;
 import ru.juriasan.clientrequestservice.exception.DBEntityNotFoundException;
 import ru.juriasan.clientrequestservice.service.ApplicationService;
@@ -28,7 +31,7 @@ public class ApplicationController {
         return latest;
     }
 
-    @RequestMapping(value = "/all", produces = {"application/json", "application/xml"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/all", produces = {"application/json"}, method = RequestMethod.GET)
     public List<Application> getAll() {
         return applicationService.findAll();
     }
