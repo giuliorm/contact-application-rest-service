@@ -30,6 +30,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>${appengine.target.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
@@ -115,6 +120,7 @@
                 <artifactId>appengine-maven-plugin</artifactId>
                 <version>1.9.64</version>
             </plugin>
+
             <!--<plugin>-->
                 <!--<groupId>com.spotify</groupId>-->
                 <!--<artifactId>dockerfile-maven-plugin</artifactId>-->
