@@ -26,6 +26,10 @@
         <appengine.app.version>1</appengine.app.version>
         <appengine.target.version>1.9.64</appengine.target.version>
         <appengine-maven-plugin-version>1.3.2</appengine-maven-plugin-version>
+        <INSTANCE_CONNECTION_NAME>crypto-premise-213607:us-central1:i11</INSTANCE_CONNECTION_NAME>
+        <user>postgres</user>
+        <password>1111</password>
+        <database>db1</database>
     </properties>
 
     <dependencies>
@@ -74,6 +78,22 @@
             <artifactId>jul-to-slf4j</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.cloud.sql</groupId>
+            <artifactId>postgres-socket-factory</artifactId>
+            <version>1.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client-appengine</artifactId>
+            <version>1.23.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -86,9 +106,15 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.google.appengine</groupId>
+                <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>1.9.60</version>
+                <version>1.3.1</version>
+                <configuration>
+                    <jvmFlags>
+                        <jvmFlag>-Xdebug</jvmFlag>
+                        <jvmFlag>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmFlag>
+                    </jvmFlags>
+                </configuration>
             </plugin>
         </plugins>
     </build>
